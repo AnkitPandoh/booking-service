@@ -1,8 +1,8 @@
 package com.booking.room;
 
-public class GreatView extends Room  implements IRoom{
+public class GreatViewRoom extends Room  implements IRoom{
 
-	public GreatView() {
+	public GreatViewRoom() {
 		super(3, "Great View", 0.0);
 	}
 

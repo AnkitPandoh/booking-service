@@ -1,7 +1,7 @@
 package com.booking.room;
 
 public class StandardRoom extends Room implements IRoom {
-
+	
 	public StandardRoom() {
 		super(1, "Standard", 0.0);
 	}
