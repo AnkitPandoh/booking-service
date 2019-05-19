@@ -28,20 +28,20 @@ public class GreatViewBooking implements IBooking{
 			for (String facility : request.getFacilities()) {
 				if ("swimming".equals(facility)) {
 					room = new SwimmingPoolDecorator(room, Integer.parseInt(
-							(String) props.get(BookingConstant.PREFIX + BookingConstant.SUITE_SWIMMING_PRICE)));
+							(String) props.get(BookingConstant.PREFIX + BookingConstant.GREAT_VIEW_SWIMMING_PRICE)));
 				} else if ("bathroom".equals(facility)) {
 					room = new EnsuiteBathroomDecorator(room, Integer.parseInt(
-							(String) props.get(BookingConstant.PREFIX + BookingConstant.SUITE_BATHROOM_PRICE)));
+							(String) props.get(BookingConstant.PREFIX + BookingConstant.GREAT_VIEW_BATHROOM_PRICE)));
 				} else if ("breakfast".equals(facility)) {
 					room = new RoomBreakfastDecorator(room, Integer.parseInt(
-							(String) props.get(BookingConstant.PREFIX + BookingConstant.SUITE_BREAKFAST_PRICE)));
+							(String) props.get(BookingConstant.PREFIX + BookingConstant.GREAT_VIEW_BREAKFAST_PRICE)));
 				} else if ("internet".equals(facility)) {
 					room = new InternetDecorator(room, Integer.parseInt(
-							(String) props.get(BookingConstant.PREFIX + BookingConstant.SUITE_INTERNET_PRICE)));
+							(String) props.get(BookingConstant.PREFIX + BookingConstant.GREAT_VIEW_INTERNET_PRICE)));
 
 				} else {
 					room = new LateCheckoutDecorator(room, Integer.parseInt(
-							(String) props.get(BookingConstant.PREFIX + BookingConstant.SUITE_LATE_CHECKOUT_PRICE)));
+							(String) props.get(BookingConstant.PREFIX + BookingConstant.GREAT_VIEW_LATE_CHECKOUT_PRICE)));
 				}
 			}
 		}
